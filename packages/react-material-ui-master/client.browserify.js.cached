@@ -91,8 +91,14 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],2:[function(require,module,exports){
+(function (global){
+global.React = React;
+// see https://github.com/meteor/react-packages/issues/83
+
 injectTapEventPlugin = require("react-tap-event-plugin");
 MUI = require('material-ui');
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{"material-ui":35,"react-tap-event-plugin":135}],3:[function(require,module,exports){
 (function (process,global){
